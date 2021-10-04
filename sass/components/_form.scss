@@ -22,6 +22,10 @@
     display: block;
     transition: all .3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, .1);
@@ -31,7 +35,6 @@
         border-bottom: 3px solid $color-secondary-dark;
       }
     }
-
 
     &::-webkit-input-placeholder {
       color: $color-grey-dark-2;
@@ -51,6 +54,16 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
+  }
+
+  &__radio__group {
+    width: 49%;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {
